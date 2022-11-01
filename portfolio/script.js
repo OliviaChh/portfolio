@@ -1,5 +1,13 @@
-aboutme = document.getElementById('button_aboutme');
-aboutme.addEventListener("click", function(){
+aboutme = document.getElementById('page_aboutme');
+portfolio = document.getElementById('page_portfolio');
+a2 = document.getElementById('page_a2');
+a3 = document.getElementById('page_a3');
+a4 = document.getElementById('page_a4');
+reflection = document.getElementById('page_reference');
+reference = document.getElementById('page_reflect');
+
+
+document.getElementById('button_aboutme').addEventListener("click", function(){
     window.scrollTo({
         top: 0,
         left: 0,
@@ -7,62 +15,65 @@ aboutme.addEventListener("click", function(){
     });
 })
 
-aboutme = document.getElementById('button_portfolio');
-aboutme.addEventListener("click", function(){
+
+document.getElementById('button_portfolio').addEventListener("click", function(){
     let windowHeight = $(window).height() - 60;
     window.scrollTo({
         left: 0,
-        top: windowHeight*1,
+        top: $(aboutme).height(),
+        behavior: 'smooth'
+    });
+    console.log(`${$(aboutme).height()}`)
+})
+
+
+document.getElementById('button_a2').addEventListener("click", function(){
+    let windowHeight = $(window).height() - 60;
+    window.scrollTo({
+        left: 0,
+        top: $(aboutme).height()+$(portfolio).height(),
+        behavior: 'smooth'
+    });
+    console.log(`${$(aboutme).height()}`)
+    console.log(`${$(portfolio).height()}`)
+})
+
+
+document.getElementById('button_a3').addEventListener("click", function(){
+    let windowHeight = $(window).height() - 60;
+    window.scrollTo({
+        left: 0,
+        top: $(aboutme).height()+$(portfolio).height()+$(a2).height(),
         behavior: 'smooth'
     });
 })
 
-aboutme = document.getElementById('button_a2');
-aboutme.addEventListener("click", function(){
+
+document.getElementById('button_a4').addEventListener("click", function(){
     let windowHeight = $(window).height() - 60;
     window.scrollTo({
         left: 0,
-        top: windowHeight*2,
+        top: $(aboutme).height()+$(portfolio).height()+$(a2).height()+$(a3).height(),
         behavior: 'smooth'
     });
 })
 
-aboutme = document.getElementById('button_a3');
-aboutme.addEventListener("click", function(){
+
+document.getElementById('button_reflection').addEventListener("click", function(){
     let windowHeight = $(window).height() - 60;
     window.scrollTo({
         left: 0,
-        top: windowHeight*3,
+        top: $(aboutme).height()+$(portfolio).height()+$(a2).height()+$(a3).height()+$(a4).height(),
         behavior: 'smooth'
     });
 })
 
-aboutme = document.getElementById('button_a4');
-aboutme.addEventListener("click", function(){
-    let windowHeight = $(window).height() - 60;
-    window.scrollTo({
-        left: 0,
-        top: windowHeight*4,
-        behavior: 'smooth'
-    });
-})
 
-aboutme = document.getElementById('button_reflection');
-aboutme.addEventListener("click", function(){
+document.getElementById('button_reference').addEventListener("click", function(){
     let windowHeight = $(window).height() - 60;
     window.scrollTo({
         left: 0,
-        top: windowHeight*5,
-        behavior: 'smooth'
-    });
-})
-
-aboutme = document.getElementById('button_reference');
-aboutme.addEventListener("click", function(){
-    let windowHeight = $(window).height() - 60;
-    window.scrollTo({
-        left: 0,
-        top: windowHeight*6,
+        top: $(aboutme).height()+$(portfolio).height()+$(a2).height()+$(a3).height()+$(a4).height()+$(reflection).height(),
         behavior: 'smooth'
     });
 })

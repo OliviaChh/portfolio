@@ -1,6 +1,8 @@
 *{
     padding: 0;
     margin: 0;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
 }
 
 body{
@@ -13,9 +15,19 @@ body{
     align-items: center;
 }
 
+.column{
+    display: flex;
+    flex-direction: column;
+}
+
 .h_center {
     display: flex;
     justify-content: center;
+}
+
+.v_center {
+    display: flex;
+    align-items: center;
 }
 
 .header{
@@ -37,6 +49,8 @@ body{
     transition: all 0.5s;
     scale: 1;
     cursor: pointer;
+    font-size: 17px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 .header_content:hover {
@@ -44,6 +58,7 @@ body{
     /* font-size: 20px; */
     scale: 1.2;
     background-color: #e8913a;
+    border-radius: 10px;
 }
 
 .page {
@@ -62,6 +77,28 @@ body{
     height: 80%;
     box-shadow: 3px 3px 2px lightgray;
     padding: 10px;
+    font-family: 'Fredoka One', cursive;
+    flex-direction: column;
+}
+
+.page_content_box_title{
+    font-size: 11vh;
+
+}
+
+.page_content_box_btn{
+    font-size: 4vh;
+    margin-top: 5%;
+    border-radius: 10px;
+    border:0.5px solid; 
+    padding: 12px;
+    background-color: #ffeddb;
+    font-family: 'Fredoka One', cursive;
+}
+
+.page_content_box_btn:hover{
+    background-color:#e8913a;
+    cursor: pointer;
 }
 
 .page_title_box {
@@ -74,4 +111,21 @@ body{
     color: white;
     font-weight: bold;
     text-align: center;
+    font-size: 4vh;
+}
+
+.aboutme_box{
+    display: flex;
+    justify-content: space-between;
+    font-size: 4vh;
+    margin: 0 25vh;
+}
+
+.aboutme_box_text{
+    margin: 0 5vh;
+}
+
+.port_box_text{
+    margin: 10vh 30vh;
+    font-size: 3.5vh; 
 }

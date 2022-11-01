@@ -1,0 +1,13 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.header{
+    position: sticky;
+    top: 20px;
+    right: 0px;
+    left: 0px;
+    height: 60px;
+    background-color: aqua;
+}
